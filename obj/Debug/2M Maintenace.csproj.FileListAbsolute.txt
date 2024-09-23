@@ -45,3 +45,5 @@ C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\2M Maint.935186B7.Up2Date
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\2M Maintenace.exe
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\2M Maintenace.pdb
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormConnection.resources
+C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormDashboard.resources
+C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormMembre.resources
