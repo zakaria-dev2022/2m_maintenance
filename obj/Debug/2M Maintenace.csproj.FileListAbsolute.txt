@@ -47,3 +47,5 @@ C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\2M Maintenace.pdb
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormConnection.resources
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormDashboard.resources
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormMembre.resources
+C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormGestionEtrer.resources
+C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormGestionSortie.resources
