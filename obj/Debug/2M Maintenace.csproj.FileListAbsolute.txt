@@ -37,7 +37,6 @@ C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\2M Maintenace.csproj.Assem
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\2M Maintenace.csproj.SuggestedBindingRedirects.cache
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\2M Maintenace.exe.config
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormChargement.resources
-C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.GestionStock.resources
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.Properties.Resources.resources
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\2M Maintenace.csproj.GenerateResource.cache
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\2M Maintenace.csproj.CoreCompileInputs.cache
@@ -49,3 +48,4 @@ C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormDashboa
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormMembre.resources
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormGestionEtrer.resources
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormGestionSortie.resources
+C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormPretMateriel.resources
