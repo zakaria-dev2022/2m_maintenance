@@ -23,7 +23,12 @@ namespace _2M_Maintenace
             Utils.AfficherLogo(logo);
         }
 
-        private void connecter_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void connecter_Click_1(object sender, EventArgs e)
         {
             // Récupérer l'email et le mot de passe saisis par l'utilisateur
             string email = txte.Text.Trim(); // Assurez-vous d'avoir un TextBox nommé txtEmail
@@ -46,7 +51,11 @@ namespace _2M_Maintenace
             {
                 MessageBox.Show("Erreur lors de la tentative de connexion : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        
-    }
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

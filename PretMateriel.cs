@@ -62,7 +62,7 @@ namespace _2M_Maintenace
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erreur lors de l'ajout du prêt de matériel : {ex.Message}");
+                //MessageBox.Show($"Erreur lors de l'ajout du prêt de matériel : {ex.Message}");
             }
             finally
             {

@@ -20,10 +20,10 @@ namespace _2M_Maintenace
             public string Emplacement { get; set; }
             public string Description { get; set; }
             public string Photo { get; set; }
-            public DateTime DateCreation { get; set; }
             public DateTime DateSortie { get; set; } // Peut être null si pas encore sorti
             public string Destination { get; set; }
             public string Raison { get; set; }
+            public DateTime DateCreation { get; set; }
 
             // Constructeur
             public GestionSortie(string imo, string numSerie, string designation, string reference, string status, DateTime dateSoumission, string emplacement, string description, string photo, DateTime dateSortie, string destination, string raison)
@@ -51,7 +51,7 @@ namespace _2M_Maintenace
                 Utils.OpenConnection();
 
                 // Insérer dans la table materiels
-                string query = "INSERT INTO materiels (imo, num_serie, designation, reference, status, date_soumission, emplacement, description, photo, date_sortie, destination, raison) " +
+                string query = "INSERT INTO gestion_sortie (imo, num_serie, designation, reference, status, date_soumission, emplacement, description, photo, date_sortie, destination, raison) " +
                                "VALUES (@Imo, @NumSerie, @Designation, @Reference, @Status, @DateSoumission, @Emplacement, @Description, @Photo, @DateSortie, @Destination, @Raison)";
 
                 MySqlCommand command = new MySqlCommand(query, Utils.cnx);
@@ -59,7 +59,7 @@ namespace _2M_Maintenace
                 command.Parameters.AddWithValue("@Imo", materiel.Imo);
                 command.Parameters.AddWithValue("@NumSerie", materiel.NumSerie);
                 command.Parameters.AddWithValue("@Designation", materiel.Designation);
-                command.Parameters.AddWithValue("@Reference", materiel.Reference ?? (object)DBNull.Value); // Permet NULL
+                command.Parameters.AddWithValue("@Reference", materiel.Reference); // Permet NULL
                 command.Parameters.AddWithValue("@Status", materiel.Status);
                 command.Parameters.AddWithValue("@DateSoumission", materiel.DateSoumission);
                 command.Parameters.AddWithValue("@Emplacement", materiel.Emplacement);
@@ -91,11 +91,11 @@ namespace _2M_Maintenace
                     int rowsAffected = deleteCommand.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Le matériel a été supprimé de la table gestion_entrer.", "Gestion des Matériels");
+                       // MessageBox.Show("Le matériel a été supprimé de la table gestion_entrer.", "Gestion des Matériels");
                     }
                     else
                     {
-                        MessageBox.Show("Le matériel n'a pas été trouvé dans la table gestion_entrer.", "Gestion des Matériels");
+                        //MessageBox.Show("Le matériel n'a pas été trouvé dans la table gestion_entrer.", "Gestion des Matériels");
                     }
                 }
                 else
@@ -121,7 +121,7 @@ namespace _2M_Maintenace
                 {
                     Utils.OpenConnection();
 
-                    string query = "UPDATE materiels SET imo = @Imo, num_serie = @NumSerie, designation = @Designation, reference = @Reference, " +
+                    string query = "UPDATE gestion_sortie SET imo = @Imo, num_serie = @NumSerie, designation = @Designation, reference = @Reference, " +
                                    "status = @Status, date_soumission = @DateSoumission, emplacement = @Emplacement, " +
                                    "description = @Description, photo = @Photo, date_sortie = @DateSortie, destination = @Destination, raison = @Raison " +
                                    "WHERE id = @Id";

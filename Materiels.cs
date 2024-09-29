@@ -44,7 +44,7 @@ namespace _2M_Maintenace
             {
                 Utils.OpenConnection();
 
-                string query = "INSERT INTO materiels (imo, num_serie, designation, reference, status, date_soumission, emplacement, description, photo) " +
+                string query = "INSERT INTO gestion_entrer (imo, num_serie, designation, reference, status, date_soumission, emplacement, description, photo) " +
                                "VALUES (@Imo, @NumSerie, @Designation, @Reference, @Status, @DateSoumission, @Emplacement, @Description, @Photo)";
 
                 MySqlCommand command = new MySqlCommand(query, Utils.cnx);
@@ -80,7 +80,7 @@ namespace _2M_Maintenace
             {
                 Utils.OpenConnection();
 
-                string query = "UPDATE materiels SET imo = @Imo, num_serie = @NumSerie, designation = @Designation, reference = @Reference, " +
+                string query = "UPDATE gestion_entrer SET imo = @Imo, num_serie = @NumSerie, designation = @Designation, reference = @Reference, " +
                                "status = @Status, date_soumission = @DateSoumission, emplacement = @Emplacement, " +
                                "description = @Description, photo = @Photo " +
                                "WHERE id = @Id";

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGestionSortie));
             this.label8 = new System.Windows.Forms.Label();
             this.txtr = new System.Windows.Forms.TextBox();
@@ -48,7 +48,7 @@
             this.txtds = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.tableau = new System.Windows.Forms.DataGridView();
-            this.supprimer = new System.Windows.Forms.Button();
+            this.ReAjouterAuStock = new System.Windows.Forms.Button();
             this.modifier = new System.Windows.Forms.Button();
             this.ajouter = new System.Windows.Forms.Button();
             this.txti = new System.Windows.Forms.TextBox();
@@ -235,55 +235,57 @@
             // 
             this.tableau.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
             this.tableau.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableau.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableau.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.tableau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tableau.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tableau.DefaultCellStyle = dataGridViewCellStyle11;
             this.tableau.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableau.EnableHeadersVisualStyles = false;
             this.tableau.Location = new System.Drawing.Point(0, 675);
             this.tableau.Name = "tableau";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableau.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableau.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.tableau.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.tableau.RowTemplate.Height = 28;
             this.tableau.Size = new System.Drawing.Size(1898, 349);
             this.tableau.TabIndex = 157;
+            this.tableau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableau_CellClick);
             // 
-            // supprimer
+            // ReAjouterAuStock
             // 
-            this.supprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(66)))), ((int)(((byte)(53)))));
-            this.supprimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.supprimer.Enabled = false;
-            this.supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.supprimer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.supprimer.ForeColor = System.Drawing.Color.White;
-            this.supprimer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.supprimer.Location = new System.Drawing.Point(656, 590);
-            this.supprimer.Name = "supprimer";
-            this.supprimer.Size = new System.Drawing.Size(157, 53);
-            this.supprimer.TabIndex = 153;
-            this.supprimer.Text = "Supprimer";
-            this.supprimer.UseVisualStyleBackColor = false;
+            this.ReAjouterAuStock.BackColor = System.Drawing.Color.Teal;
+            this.ReAjouterAuStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ReAjouterAuStock.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ReAjouterAuStock.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReAjouterAuStock.ForeColor = System.Drawing.Color.White;
+            this.ReAjouterAuStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReAjouterAuStock.Location = new System.Drawing.Point(389, 600);
+            this.ReAjouterAuStock.Name = "ReAjouterAuStock";
+            this.ReAjouterAuStock.Size = new System.Drawing.Size(248, 53);
+            this.ReAjouterAuStock.TabIndex = 153;
+            this.ReAjouterAuStock.Text = "Ajouter au Stock";
+            this.ReAjouterAuStock.UseVisualStyleBackColor = false;
+            this.ReAjouterAuStock.Visible = false;
+            this.ReAjouterAuStock.Click += new System.EventHandler(this.ReAjouterAuStock_Click);
             // 
             // modifier
             // 
@@ -294,12 +296,13 @@
             this.modifier.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modifier.ForeColor = System.Drawing.Color.White;
             this.modifier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.modifier.Location = new System.Drawing.Point(451, 590);
+            this.modifier.Location = new System.Drawing.Point(677, 600);
             this.modifier.Name = "modifier";
-            this.modifier.Size = new System.Drawing.Size(148, 53);
+            this.modifier.Size = new System.Drawing.Size(248, 53);
             this.modifier.TabIndex = 154;
             this.modifier.Text = "Modifier";
             this.modifier.UseVisualStyleBackColor = false;
+            this.modifier.Click += new System.EventHandler(this.modifier_Click);
             // 
             // ajouter
             // 
@@ -309,9 +312,9 @@
             this.ajouter.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ajouter.ForeColor = System.Drawing.Color.White;
             this.ajouter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ajouter.Location = new System.Drawing.Point(248, 590);
+            this.ajouter.Location = new System.Drawing.Point(389, 600);
             this.ajouter.Name = "ajouter";
-            this.ajouter.Size = new System.Drawing.Size(148, 53);
+            this.ajouter.Size = new System.Drawing.Size(248, 53);
             this.ajouter.TabIndex = 152;
             this.ajouter.Text = "Ajouter";
             this.ajouter.UseVisualStyleBackColor = false;
@@ -376,6 +379,7 @@
             this.precedent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.precedent.TabIndex = 50;
             this.precedent.TabStop = false;
+            this.precedent.Click += new System.EventHandler(this.precedent_Click);
             // 
             // pictureBox2
             // 
@@ -397,6 +401,7 @@
             this.chercher.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.chercher.TabIndex = 169;
             this.chercher.TabStop = false;
+            this.chercher.Click += new System.EventHandler(this.chercher_Click);
             // 
             // btnnouveau
             // 
@@ -407,6 +412,7 @@
             this.btnnouveau.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnnouveau.TabIndex = 168;
             this.btnnouveau.TabStop = false;
+            this.btnnouveau.Click += new System.EventHandler(this.btnnouveau_Click);
             // 
             // picture
             // 
@@ -502,7 +508,7 @@
             this.Controls.Add(this.txtds);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tableau);
-            this.Controls.Add(this.supprimer);
+            this.Controls.Add(this.ReAjouterAuStock);
             this.Controls.Add(this.picture);
             this.Controls.Add(this.modifier);
             this.Controls.Add(this.ajouter);
@@ -551,7 +557,7 @@
         private System.Windows.Forms.DateTimePicker txtds;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView tableau;
-        private System.Windows.Forms.Button supprimer;
+        private System.Windows.Forms.Button ReAjouterAuStock;
         private System.Windows.Forms.PictureBox picture;
         private System.Windows.Forms.Button modifier;
         private System.Windows.Forms.Button ajouter;

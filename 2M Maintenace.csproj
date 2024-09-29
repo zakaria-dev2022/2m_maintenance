@@ -51,6 +51,7 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=9.0.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.9.0.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
@@ -122,12 +123,40 @@
     <Compile Include="FormDashboard.Designer.cs">
       <DependentUpon>FormDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestionStock.cs">
+    <Compile Include="FormGestionEtrer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestionStock.Designer.cs">
-      <DependentUpon>GestionStock.cs</DependentUpon>
+    <Compile Include="FormGestionEtrer.Designer.cs">
+      <DependentUpon>FormGestionEtrer.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGestionSortie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestionSortie.Designer.cs">
+      <DependentUpon>FormGestionSortie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIntervention.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIntervention.Designer.cs">
+      <DependentUpon>FormIntervention.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMembre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMembre.Designer.cs">
+      <DependentUpon>FormMembre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPretMateriel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPretMateriel.Designer.cs">
+      <DependentUpon>FormPretMateriel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSortie.cs" />
+    <Compile Include="Materiels.cs" />
+    <Compile Include="Membres.cs" />
+    <Compile Include="PretMateriel.cs" />
     <Compile Include="Profils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -138,8 +167,23 @@
     <EmbeddedResource Include="FormConnection.resx">
       <DependentUpon>FormConnection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestionStock.resx">
-      <DependentUpon>GestionStock.cs</DependentUpon>
+    <EmbeddedResource Include="FormDashboard.resx">
+      <DependentUpon>FormDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestionEtrer.resx">
+      <DependentUpon>FormGestionEtrer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestionSortie.resx">
+      <DependentUpon>FormGestionSortie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIntervention.resx">
+      <DependentUpon>FormIntervention.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMembre.resx">
+      <DependentUpon>FormMembre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPretMateriel.resx">
+      <DependentUpon>FormPretMateriel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -149,6 +193,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -163,6 +208,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-down-sign-to-navigate %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-down-sign-to-navigate %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mechanical-gears- %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-loan-approved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\videography.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings %286%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,6 +11,7 @@ namespace _2M_Maintenace
     internal class Membres
     {
         public int Id { get; set; }
+        public string Code { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
         public string Tel { get; set; }
@@ -22,8 +23,9 @@ namespace _2M_Maintenace
         public string Profil { get; set; }
         public DateTime DateCreation { get; private set; }
 
-        public Membres(string nom, string prenom, string tel, string cin, string gmail, string specialite, string genre, DateTime dateNaissance, string profil)
+        public Membres(string code,string nom, string prenom, string tel, string cin, string gmail, string specialite, string genre, DateTime dateNaissance, string profil)
         {
+            this.Code = code;
             this.Nom = nom;
             this.Prenom = prenom;
             this.Tel = tel;
@@ -42,11 +44,12 @@ namespace _2M_Maintenace
             {
                 Utils.OpenConnection();
 
-                string query = "INSERT INTO membres (Nom, Prenom, Tel, CIN, Gmail, Specialite, Genre, DateNaissance, Profil, DateCreation) " +
-                               "VALUES (@Nom, @Prenom, @Tel, @CIN, @Gmail, @Specialite, @Genre, @DateNaissance, @Profil, @DateCreation)";
+                string query = "INSERT INTO membres (Code, Nom, Prenom, Tel, CIN, Gmail, Specialite, Genre, DateNaissance, Profil, DateCreation) " +
+                               "VALUES (@Code, @Nom, @Prenom, @Tel, @CIN, @Gmail, @Specialite, @Genre, @DateNaissance, @Profil, @DateCreation)";
 
                 MySqlCommand command = new MySqlCommand(query, Utils.cnx);
                 {
+                    command.Parameters.AddWithValue("@Code", membre.Code);
                     command.Parameters.AddWithValue("@Nom", membre.Nom);
                     command.Parameters.AddWithValue("@Prenom", membre.Prenom);
                     command.Parameters.AddWithValue("@Tel", membre.Tel);
@@ -78,7 +81,7 @@ namespace _2M_Maintenace
                 Utils.OpenConnection();
 
                 // Requête SQL pour mettre à jour les informations du membre
-                string query = "UPDATE membres SET Nom = @Nom, Prenom = @Prenom, Tel = @Tel, CIN = @CIN, " +
+                string query = "UPDATE membres SET Code = @Code, Nom = @Nom, Prenom = @Prenom, Tel = @Tel, CIN = @CIN, " +
                                "Gmail = @Gmail, Specialite = @Specialite, Genre = @Genre, DateNaissance = @DateNaissance, Profil = @Profil " +
                                "WHERE Id = @Id";
 
@@ -86,6 +89,7 @@ namespace _2M_Maintenace
                 MySqlCommand command = new MySqlCommand(query, Utils.cnx);
                 {
                     // Ajouter les paramètres à la commande
+                    command.Parameters.AddWithValue("@Code", membre.Code);
                     command.Parameters.AddWithValue("@Nom", membre.Nom);
                     command.Parameters.AddWithValue("@Prenom", membre.Prenom);
                     command.Parameters.AddWithValue("@Tel", membre.Tel);

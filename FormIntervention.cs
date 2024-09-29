@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace _2M_Maintenace
 {
-    public partial class GestionStock : Form
+    public partial class FormIntervention : Form
     {
-        public GestionStock()
+        public FormIntervention()
         {
             InitializeComponent();
+        }
+
+        private void FormIntervention_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -23,16 +23,19 @@ namespace _2M_Maintenace
         {
             Utils.CloseConnection();
             //Connection dbOperations = new Connection();
-            DataTable dataTable = Utils.ObtenirDonnees("SELECT \r\n    id AS 'N°Materiel',\r\n    imo AS 'IMO',\r\n    num_serie AS 'Num_serie',\r\n    designation AS 'Designation',\r\n    reference AS 'Reference',\r\n    status AS 'Status',\r\n    date_soumission AS 'Date_soumission',\r\n    emplacement AS 'Emplacement',\r\n    description AS 'Description',\r\n    photo AS 'Photo',\r\n    date_creation AS 'Date_creation'\r\nFROM gestion_sortie;");
+            DataTable dataTable = Utils.ObtenirDonnees("SELECT \r\n    id AS 'N°Materiel',\r\n    imo AS 'IMO',\r\n    num_serie AS 'Num_serie',\r\n    designation AS 'Designation',\r\n    reference AS 'Reference',\r\n    status AS 'Status',\r\n    date_sortie AS 'Date_sortie',\r\n    date_soumission AS 'Date_soumission',\r\n    destination AS 'Destination',\r\n emplacement AS 'Emplacement',\r\n description AS 'Description',\r\n    raison AS 'Raison',\r\n    photo AS 'Photo',\r\n    date_creation AS 'Date_creation'\r\nFROM gestion_sortie;");
             // Lier le DataTable au DataGridView
             tableau.DataSource = dataTable;
+            tableau.Columns["Date_soumission"].Visible = false;
+            tableau.Columns["Emplacement"].Visible = false;
+            tableau.Columns["Description"].Visible = false;
             tableau.Columns["Photo"].Visible = false;
             tableau.Columns["date_creation"].Visible = false;
             for (int i = 1; i < 8; i++)
             {
                 tableau.Columns[i].Width = 133; // Définit chaque colonne à une largeur de 200 unités
             }
-            tableau.Columns[8].Width = 190;
+            tableau.Columns[11].Width = 195;
             nouveau();
         }
         void nouveau()
@@ -51,12 +54,12 @@ namespace _2M_Maintenace
             txtrs.Text = string.Empty;
             lb_photo.Text = string.Empty;
             picture.Image = null;
-            txti.Focus();
             txtds.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            ajouter.Enabled = true;
+            ajouter.Visible = true;
             modifier.Enabled = false;
-            supprimer.Enabled = false;
-
+            ReAjouterAuStock.Visible = false;
+            importerMateriel();
+            txtdt.Focus();
 
         }
         void importerMateriel()
@@ -68,13 +71,14 @@ namespace _2M_Maintenace
 
             while (!materialFound)
             {
+                Utils.CloseConnection();
                 // Demander à l'utilisateur d'entrer le N° IMO du matériel
-                string nimo = Microsoft.VisualBasic.Interaction.InputBox("Entrer N° IMO du Matériel que vous recherchez", "AHF");
+                string nimo = Microsoft.VisualBasic.Interaction.InputBox("Entrer N° IMO du Matériel que vous recherchez", "2M");
 
                 // Vérifier si l'utilisateur a annulé (si nimo est vide, il a appuyé sur Annuler ou n'a rien entré)
                 if (string.IsNullOrWhiteSpace(nimo))
                 {
-                    MessageBox.Show("L'opération a été annulée.", "Recherche Matériel");
+                    //MessageBox.Show("L'opération a été annulée.", "Recherche Matériel");
                     return; // Sortir de la méthode
                 }
 
@@ -118,7 +122,7 @@ namespace _2M_Maintenace
         private void ajouter_Click(object sender, EventArgs e)
         {
             // Vérifier que tous les champs obligatoires sont remplis
-            if (!string.IsNullOrWhiteSpace(txti.Text) && !string.IsNullOrWhiteSpace(txtns.Text) && !string.IsNullOrWhiteSpace(txtt.Text))
+            if (!string.IsNullOrWhiteSpace(txti.Text))
             {
                 // Récupérer les valeurs des TextBox
                 string imo = txti.Text;
@@ -161,6 +165,220 @@ namespace _2M_Maintenace
             {
                 MessageBox.Show("Veuillez remplir tous les champs obligatoires.", "Erreur de validation", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void chercher_Click(object sender, EventArgs e)
+        {
+            // Méthode pour importer un matériel via son IMO
+
+                Utils.CloseConnection(); // Fermer toute connexion ouverte
+
+                // Demander à l'utilisateur d'entrer le numéro IMO du matériel
+                string imo = Microsoft.VisualBasic.Interaction.InputBox("Entrer le numéro IMO du matériel que vous recherchez", "Gestion des Matériels");
+
+                // Vérifier si l'IMO est vide
+                if (string.IsNullOrWhiteSpace(imo))
+                {
+                    MessageBox.Show("Le numéro IMO ne peut pas être vide.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Requête SQL pour obtenir les données du matériel
+                DataTable dataTable = Utils.ObtenirDonnees("SELECT * FROM gestion_entrer WHERE IMO = '" + imo + "'");
+
+                // Si des données sont trouvées
+                if (dataTable.Rows.Count > 0)
+                {
+                    DataRow row = dataTable.Rows[0];
+
+                   
+                        // Remplir les TextBox dans le formulaire principal pour permettre la modification
+                        txtid.Text = row["ID"].ToString();
+                        txti.Text = row["IMO"].ToString();
+                        txtns.Text = row["Num_serie"].ToString();
+                        txtt.Text = row["Designation"].ToString();
+                        txtr.Text = row["Reference"].ToString();
+                        txts.Text = row["Status"].ToString();
+                        txtds.Value = Convert.ToDateTime(row["Date_soumission"]);
+                        txte.Text = row["Emplacement"].ToString();
+                        txtd.Text = row["Description"].ToString();
+                        lb_photo.Text = row["Photo"].ToString();
+                lb_photo.Text = row["Photo"].ToString();
+
+                // Charger l'image de photo
+                string photoPath = AppDomain.CurrentDomain.BaseDirectory + @"img\Materiels\" + lb_photo.Text;
+                try
+                {
+                    if (!string.IsNullOrWhiteSpace(lb_photo.Text) && System.IO.File.Exists(photoPath))
+                    {
+                        picture.Image = Image.FromFile(photoPath);
+                    }
+                    else
+                    {
+                        picture.Image = null; // ou une image par défaut
+                        MessageBox.Show("La photo est introuvable.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erreur lors du chargement de la photo : {ex.Message}", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    picture.Image = null; // ou une image par défaut
+                }
+
+            }
+                else
+                {
+                    MessageBox.Show("Le matériel avec le numéro IMO entré n'a pas été trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        
+
+        private void btnnouveau_Click(object sender, EventArgs e)
+        {
+            nouveau();
+        }
+
+        private void precedent_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Voulez-vous retourn au page précedent", "2M", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                FormDashboard dash = new FormDashboard();
+                dash.Show();
+                this.Hide();
+            }
+        }
+
+        private void modifier_Click(object sender, EventArgs e)
+        {
+            // Vérifier que tous les champs obligatoires sont remplis
+            if (!string.IsNullOrWhiteSpace(txti.Text) && !string.IsNullOrWhiteSpace(txtdt.Text) && !string.IsNullOrWhiteSpace(txtrs.Text))
+            {
+                // Récupérer les valeurs des TextBox
+                int id = int.Parse(txtid.Text);
+                string imo = txti.Text;
+                string numSerie = txtns.Text;
+                string designation = txtt.Text;
+                string reference = txtr.Text; // Peut être null
+                string status = txts.Text;
+                DateTime dateSoumission = txtds.Value;// Assurez-vous du format
+                string emplacement = txte.Text;
+                string description = txtd.Text;
+                string photo = lb_photo.Text; // Assurez-vous que le chemin de la photo est récupéré si besoin
+                DateTime dateSortie = txtdst.Value; // Récupérer la date de sortie
+                string destination = txtdt.Text;
+                string raison = txtrs.Text;
+
+                // Créer un objet Materiel
+                GestionSortie materiel = new GestionSortie(imo, numSerie, designation, reference, status, dateSoumission, emplacement, description, photo, dateSortie,destination,raison);
+
+                // Appeler la méthode AjouterMateriel pour insérer le matériel
+                GestionSortie.ModifierMateriel(materiel, id);
+
+                // Remplir à nouveau le DataGridView avec les nouveaux données
+                remplir();
+            }
+            else
+            {
+                MessageBox.Show("Veuillez remplir tous les champs obligatoires.", "Erreur de validation", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void tableau_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int n = tableau.Rows.Count - 1;
+            if (e.RowIndex >= 0 && e.RowIndex < n)
+            {
+                DataGridViewRow row = tableau.Rows[e.RowIndex];
+
+                // Récupération des valeurs dans les TextBox
+                txtid.Text = row.Cells["N°Materiel"].Value.ToString();
+                txti.Text = row.Cells["Imo"].Value.ToString();
+                txtns.Text = row.Cells["Num_serie"].Value.ToString();
+                txtt.Text = row.Cells["Designation"].Value.ToString();
+                txtr.Text = row.Cells["Reference"].Value.ToString();
+                txts.Text = row.Cells["Status"].Value.ToString();
+                txtds.Value = Convert.ToDateTime(row.Cells["Date_soumission"].Value);
+                txte.Text = row.Cells["Emplacement"].Value.ToString();
+                txtd.Text = row.Cells["Description"].Value.ToString();
+                lb_photo.Text = row.Cells["Photo"].Value.ToString();
+                txtdst.Value = Convert.ToDateTime(row.Cells["Date_Sortie"].Value);
+                txtdt.Text = row.Cells["Destination"].Value.ToString();
+                txtrs.Text = row.Cells["Raison"].Value.ToString();
+
+                // Chargement de l'image de photo
+                string photoPath = AppDomain.CurrentDomain.BaseDirectory + @"img\Materiels\" + lb_photo.Text;
+                try
+                {
+                    if (!string.IsNullOrWhiteSpace(lb_photo.Text) && System.IO.File.Exists(photoPath))
+                    {
+                        picture.Image = Image.FromFile(photoPath);
+                    }
+                    else
+                    {
+                        picture.Image = null; // ou une image par défaut
+                        //MessageBox.Show("La photo est introuvable.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erreur lors du chargement de la photo : {ex.Message}", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    picture.Image = null; // ou une image par défaut
+                }
+
+                // Gestion des boutons
+                ajouter.Visible = false;
+                modifier.Enabled = true;
+                ReAjouterAuStock.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Aucun élément sélectionné", "Information");
+                // Remplir à nouveau les données si nécessaire
+                remplir();
+            }
+        }
+
+        private void ReAjouterAuStock_Click(object sender, EventArgs e)
+        {
+            string imo = txti.Text;
+            DataTable dataTable = Utils.ObtenirDonnees("SELECT * FROM gestion_entrer WHERE IMO = '" + imo + "'");
+            // Si des données sont trouvées
+            if (dataTable.Rows.Count > 0)
+            {
+                MessageBox.Show("Le Produit Qui a N° IMO "+imo+" Il Existe Déja Dans Le Stock D'entrer","2M");
+            }
+            else
+            {
+                // Récupérer les valeurs des TextBox
+                string numSerie = txtns.Text;
+                string designation = txtt.Text;
+                string reference = txtr.Text; // Peut être null
+                string status = txts.Text;
+                DateTime dateSoumission = DateTime.Now;// Assurez-vous du format
+                string emplacement = txte.Text;
+                string description = txtd.Text;
+                string photo = lb_photo.Text; // Assurez-vous que le chemin de la photo est récupéré si besoin
+                                              // Créer un objet Materiel
+                Materiels materiel = new Materiels
+                (
+                    imo,
+                    numSerie,
+                    designation,
+                    reference,
+                    status,
+                    dateSoumission,
+                    emplacement,
+                    description,
+                    photo
+                );
+                // Appeler la méthode AjouterMateriel pour insérer le matériel
+                Materiels.AjouterMateriel(materiel);
+
+            }
+
+            // Remplir à nouveau le DataGridView avec les nouveaux données
+            remplir();
+    
         }
     }
 }

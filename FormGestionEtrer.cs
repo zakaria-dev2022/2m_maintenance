@@ -72,7 +72,7 @@ namespace _2M_Maintenace
                 chemin = lb_photo.Text;
                 //chemin =txtmt.Text + " Photo voiture" : typeFile;
                 //File.Copy(fileinfo.FullName, Application.StartupPath + "/img_client/" + chemin);
-                File.Copy(fileinfo.FullName, AppDomain.CurrentDomain.BaseDirectory + @"Materiels\" + chemin);
+                File.Copy(fileinfo.FullName, AppDomain.CurrentDomain.BaseDirectory + @"img\Materiels\" + chemin);
 
             }
         }
@@ -123,10 +123,10 @@ namespace _2M_Maintenace
         private void supprimer_Click(object sender, EventArgs e)
         {
             Utils.CloseConnection();
-            if (MessageBox.Show("Voulez-vous supprimer Ce Materiel?", "AHF", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Voulez-vous supprimer Ce Materiel?", "2M", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Utils.SuprimerDonner("Materiels", txtid.Text);
-                MessageBox.Show("Supression Avec Success", "AHF");
+                MessageBox.Show("Supression Avec Success", "2M");
                 remplir();
             }
         }
@@ -171,7 +171,7 @@ namespace _2M_Maintenace
                 string imo = Microsoft.VisualBasic.Interaction.InputBox("Entrer le numéro IMO du matériel que vous recherchez", "Gestion des Matériels");
 
                 // Obtenir les données du matériel en fonction du numéro IMO
-                DataTable dataTable = Utils.ObtenirDonnees("SELECT * FROM materiels WHERE IMO = '" + imo + "'");
+                DataTable dataTable = Utils.ObtenirDonnees("SELECT * FROM gestion_entrer WHERE IMO = '" + imo + "'");
 
                 // Vérifier si des données ont été trouvées
                 if (dataTable.Rows.Count > 0)
@@ -264,7 +264,7 @@ namespace _2M_Maintenace
                         lb_photo.Text = row["Photo"].ToString();
 
                         // Charger l'image de photo
-                        string photoPath = AppDomain.CurrentDomain.BaseDirectory + @"Materiels\" + lb_photo.Text;
+                        string photoPath = AppDomain.CurrentDomain.BaseDirectory + @"img\Materiels\" + lb_photo.Text;
                         try
                         {
                             if (!string.IsNullOrWhiteSpace(lb_photo.Text) && System.IO.File.Exists(photoPath))
@@ -344,7 +344,7 @@ namespace _2M_Maintenace
                 lb_photo.Text = row.Cells["Photo"].Value.ToString();
 
                 // Chargement de l'image de photo
-                string photoPath = AppDomain.CurrentDomain.BaseDirectory + @"Materiels\" + lb_photo.Text;
+                string photoPath = AppDomain.CurrentDomain.BaseDirectory + @"img\Materiels\" + lb_photo.Text;
                 try
                 {
                     if (!string.IsNullOrWhiteSpace(lb_photo.Text) && System.IO.File.Exists(photoPath))
@@ -366,7 +366,7 @@ namespace _2M_Maintenace
                 // Gestion des boutons
                 ajouter.Enabled = false;
                 modifier.Enabled = true;
-                supprimer.Enabled = true;
+                
             }
             else
             {
@@ -500,7 +500,7 @@ namespace _2M_Maintenace
                     lb_photo.Text = row["Photo"].ToString();
 
                     // Charger l'image de photo
-                    string photoPath = AppDomain.CurrentDomain.BaseDirectory + @"Materiels\" + lb_photo.Text;
+                    string photoPath = AppDomain.CurrentDomain.BaseDirectory + @"img\Materiels\" + lb_photo.Text;
                     try
                     {
                         if (!string.IsNullOrWhiteSpace(lb_photo.Text) && System.IO.File.Exists(photoPath))

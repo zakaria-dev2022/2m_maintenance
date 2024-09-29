@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -274,6 +275,32 @@ namespace _2M_Maintenace
             return isAuthenticated; // Retourner true si authentifié, sinon false
         }
 
+        public static void statistique(Label label,string table)
+        {
+            try
+            {
+                OpenConnection(); // Ouvrir la connexion à la base de données
+
+                // Requête SQL pour sélectionner toutes les réservations pour la date de demain
+                string query = $"SELECT COUNT(*) FROM "+table;
+
+                MySqlCommand command = new MySqlCommand(query, cnx);
+                int statistique = Convert.ToInt32(command.ExecuteScalar());
+
+                // Afficher le nombre de réservations dans la Label
+                label.Text = statistique.ToString();
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Erreur lors de l'exécution de la requête : " + ex.Message);
+                //MessageBox.Show("Erreur lors de l'exécution de la requête : " + ex.Message, "Gestion Restaurant");
+            }
+            finally
+            {
+                if (cnx.State == System.Data.ConnectionState.Open)
+                    cnx.Close(); // Fermer la connexion à la base de données après utilisation
+            }
+        }
 
 
 
