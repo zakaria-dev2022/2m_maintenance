@@ -22,7 +22,7 @@ namespace _2M_Maintenace
             Utils.AfficherLogo(logo);
             Utils.statistique(lb_materiel,"gestion_entrer");
             Utils.statistique(lb_pretmateriel,"pret_materiel");
-            Utils.statistique(lb_intervention, "intervention");
+            Utils.statistiqueIntervention(lb_intervention);
         }
 
         private void btnMembre_Click(object sender, EventArgs e)
@@ -102,6 +102,13 @@ namespace _2M_Maintenace
         {
             FormIntervention formIntervention = new FormIntervention();
             formIntervention.Show();
+            this.Hide();
+        }
+
+        private void btnParametre_Click(object sender, EventArgs e)
+        {
+            FormSetting formSetting = new FormSetting();
+            formSetting.Show();
             this.Hide();
         }
     }

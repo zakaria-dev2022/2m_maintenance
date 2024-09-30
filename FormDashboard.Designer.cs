@@ -32,50 +32,50 @@
             this.lb_pretmateriel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lb_intervention = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_materiel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.lb_na = new System.Windows.Forms.Label();
             this.btnMembre = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnParametre = new System.Windows.Forms.PictureBox();
+            this.btnDeconnecter = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnPretMateriel = new System.Windows.Forms.Button();
             this.btnIntervention = new System.Windows.Forms.Button();
+            this.flechTop = new System.Windows.Forms.PictureBox();
+            this.flechBotom = new System.Windows.Forms.PictureBox();
             this.btnmaterielSortie = new System.Windows.Forms.Button();
             this.btnmaterielEntrer = new System.Windows.Forms.Button();
             this.btnMateriel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.flechTop = new System.Windows.Forms.PictureBox();
-            this.flechBotom = new System.Windows.Forms.PictureBox();
-            this.btnParametre = new System.Windows.Forms.PictureBox();
-            this.btnDeconnecter = new System.Windows.Forms.PictureBox();
-            this.logo = new System.Windows.Forms.PictureBox();
             this.btnReduire = new System.Windows.Forms.PictureBox();
             this.panel11.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flechTop)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flechBotom)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnParametre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeconnecter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.flechTop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechBotom)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnReduire)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,6 +115,17 @@
             this.panel11.Size = new System.Drawing.Size(430, 250);
             this.panel11.TabIndex = 29;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
+            this.pictureBox3.Image = global::_2M_Maintenace.Properties.Resources.home_loan_approved;
+            this.pictureBox3.Location = new System.Drawing.Point(33, 80);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(132, 119);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
             // lb_intervention
             // 
             this.lb_intervention.AutoSize = true;
@@ -150,6 +161,17 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(430, 250);
             this.panel10.TabIndex = 28;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
+            this.pictureBox1.Image = global::_2M_Maintenace.Properties.Resources.settings__6_;
+            this.pictureBox1.Location = new System.Drawing.Point(33, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(132, 119);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // lb_materiel
             // 
@@ -187,6 +209,17 @@
             this.panel9.Size = new System.Drawing.Size(430, 250);
             this.panel9.TabIndex = 27;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
+            this.pictureBox4.Image = global::_2M_Maintenace.Properties.Resources.videography;
+            this.pictureBox4.Location = new System.Drawing.Point(33, 80);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(132, 119);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
@@ -196,6 +229,19 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(390, 164);
             this.panel4.TabIndex = 0;
+            // 
+            // logo
+            // 
+            this.logo.BackColor = System.Drawing.Color.White;
+            this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.logo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(12, 0);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(378, 164);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logo.TabIndex = 20;
+            this.logo.TabStop = false;
             // 
             // lb_na
             // 
@@ -265,6 +311,33 @@
             this.panel3.Size = new System.Drawing.Size(16, 65);
             this.panel3.TabIndex = 16;
             // 
+            // btnParametre
+            // 
+            this.btnParametre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
+            this.btnParametre.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnParametre.Image = global::_2M_Maintenace.Properties.Resources.mechanical_gears___1_;
+            this.btnParametre.Location = new System.Drawing.Point(259, 0);
+            this.btnParametre.Margin = new System.Windows.Forms.Padding(30);
+            this.btnParametre.Name = "btnParametre";
+            this.btnParametre.Size = new System.Drawing.Size(46, 65);
+            this.btnParametre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnParametre.TabIndex = 15;
+            this.btnParametre.TabStop = false;
+            this.btnParametre.Click += new System.EventHandler(this.btnParametre_Click);
+            // 
+            // btnDeconnecter
+            // 
+            this.btnDeconnecter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
+            this.btnDeconnecter.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnDeconnecter.Image = global::_2M_Maintenace.Properties.Resources.logout__5_;
+            this.btnDeconnecter.Location = new System.Drawing.Point(321, 0);
+            this.btnDeconnecter.Name = "btnDeconnecter";
+            this.btnDeconnecter.Size = new System.Drawing.Size(47, 65);
+            this.btnDeconnecter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDeconnecter.TabIndex = 13;
+            this.btnDeconnecter.TabStop = false;
+            this.btnDeconnecter.Click += new System.EventHandler(this.btnDeconnecter_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -313,6 +386,31 @@
             this.btnIntervention.Text = "Gestion Des Interventions\r\n";
             this.btnIntervention.UseVisualStyleBackColor = false;
             this.btnIntervention.Click += new System.EventHandler(this.btnIntervention_Click);
+            // 
+            // flechTop
+            // 
+            this.flechTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
+            this.flechTop.Image = global::_2M_Maintenace.Properties.Resources.arrow_down_sign_to_navigate__5_;
+            this.flechTop.Location = new System.Drawing.Point(335, 169);
+            this.flechTop.Name = "flechTop";
+            this.flechTop.Size = new System.Drawing.Size(32, 28);
+            this.flechTop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.flechTop.TabIndex = 15;
+            this.flechTop.TabStop = false;
+            this.flechTop.Visible = false;
+            this.flechTop.Click += new System.EventHandler(this.flechTop_Click);
+            // 
+            // flechBotom
+            // 
+            this.flechBotom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
+            this.flechBotom.Image = global::_2M_Maintenace.Properties.Resources.arrow_down_sign_to_navigate__4_;
+            this.flechBotom.Location = new System.Drawing.Point(335, 169);
+            this.flechBotom.Name = "flechBotom";
+            this.flechBotom.Size = new System.Drawing.Size(32, 28);
+            this.flechBotom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.flechBotom.TabIndex = 14;
+            this.flechBotom.TabStop = false;
+            this.flechBotom.Click += new System.EventHandler(this.flechBotom_Click);
             // 
             // btnmaterielSortie
             // 
@@ -375,103 +473,6 @@
             this.panel1.Size = new System.Drawing.Size(1946, 164);
             this.panel1.TabIndex = 26;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
-            this.pictureBox3.Image = global::_2M_Maintenace.Properties.Resources.home_loan_approved;
-            this.pictureBox3.Location = new System.Drawing.Point(33, 80);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(132, 119);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
-            this.pictureBox1.Image = global::_2M_Maintenace.Properties.Resources.settings__6_;
-            this.pictureBox1.Location = new System.Drawing.Point(33, 80);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(132, 119);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
-            this.pictureBox4.Image = global::_2M_Maintenace.Properties.Resources.videography;
-            this.pictureBox4.Location = new System.Drawing.Point(33, 80);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(132, 119);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // flechTop
-            // 
-            this.flechTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
-            this.flechTop.Image = global::_2M_Maintenace.Properties.Resources.arrow_down_sign_to_navigate__5_;
-            this.flechTop.Location = new System.Drawing.Point(335, 169);
-            this.flechTop.Name = "flechTop";
-            this.flechTop.Size = new System.Drawing.Size(32, 28);
-            this.flechTop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.flechTop.TabIndex = 15;
-            this.flechTop.TabStop = false;
-            this.flechTop.Visible = false;
-            this.flechTop.Click += new System.EventHandler(this.flechTop_Click);
-            // 
-            // flechBotom
-            // 
-            this.flechBotom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
-            this.flechBotom.Image = global::_2M_Maintenace.Properties.Resources.arrow_down_sign_to_navigate__4_;
-            this.flechBotom.Location = new System.Drawing.Point(335, 169);
-            this.flechBotom.Name = "flechBotom";
-            this.flechBotom.Size = new System.Drawing.Size(32, 28);
-            this.flechBotom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.flechBotom.TabIndex = 14;
-            this.flechBotom.TabStop = false;
-            this.flechBotom.Click += new System.EventHandler(this.flechBotom_Click);
-            // 
-            // btnParametre
-            // 
-            this.btnParametre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
-            this.btnParametre.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnParametre.Image = global::_2M_Maintenace.Properties.Resources.mechanical_gears___1_;
-            this.btnParametre.Location = new System.Drawing.Point(259, 0);
-            this.btnParametre.Margin = new System.Windows.Forms.Padding(30);
-            this.btnParametre.Name = "btnParametre";
-            this.btnParametre.Size = new System.Drawing.Size(46, 65);
-            this.btnParametre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnParametre.TabIndex = 15;
-            this.btnParametre.TabStop = false;
-            // 
-            // btnDeconnecter
-            // 
-            this.btnDeconnecter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
-            this.btnDeconnecter.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnDeconnecter.Image = global::_2M_Maintenace.Properties.Resources.logout__5_;
-            this.btnDeconnecter.Location = new System.Drawing.Point(321, 0);
-            this.btnDeconnecter.Name = "btnDeconnecter";
-            this.btnDeconnecter.Size = new System.Drawing.Size(47, 65);
-            this.btnDeconnecter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnDeconnecter.TabIndex = 13;
-            this.btnDeconnecter.TabStop = false;
-            this.btnDeconnecter.Click += new System.EventHandler(this.btnDeconnecter_Click);
-            // 
-            // logo
-            // 
-            this.logo.BackColor = System.Drawing.Color.White;
-            this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.logo.Dock = System.Windows.Forms.DockStyle.Right;
-            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(12, 0);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(378, 164);
-            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logo.TabIndex = 20;
-            this.logo.TabStop = false;
-            // 
             // btnReduire
             // 
             this.btnReduire.Image = global::_2M_Maintenace.Properties.Resources.minus__2_;
@@ -501,23 +502,23 @@
             this.Load += new System.EventHandler(this.FormDashboard_Load);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flechTop)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flechBotom)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnParametre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeconnecter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.flechTop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flechBotom)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnReduire)).EndInit();
             this.ResumeLayout(false);
 

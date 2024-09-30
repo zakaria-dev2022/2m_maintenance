@@ -133,7 +133,7 @@
             // chercherPreteur
             // 
             this.chercherPreteur.Image = global::_2M_Maintenace.Properties.Resources.search__1_;
-            this.chercherPreteur.Location = new System.Drawing.Point(613, 18);
+            this.chercherPreteur.Location = new System.Drawing.Point(596, 111);
             this.chercherPreteur.Name = "chercherPreteur";
             this.chercherPreteur.Size = new System.Drawing.Size(80, 55);
             this.chercherPreteur.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -349,7 +349,7 @@
             // chercherMateriel
             // 
             this.chercherMateriel.Image = global::_2M_Maintenace.Properties.Resources.search__1_;
-            this.chercherMateriel.Location = new System.Drawing.Point(598, 19);
+            this.chercherMateriel.Location = new System.Drawing.Point(586, 111);
             this.chercherMateriel.Name = "chercherMateriel";
             this.chercherMateriel.Size = new System.Drawing.Size(80, 55);
             this.chercherMateriel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

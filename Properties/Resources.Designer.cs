@@ -63,6 +63,16 @@ namespace _2M_Maintenace.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_user {
+            get {
+                object obj = ResourceManager.GetObject("add-user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrow_down_sign_to_navigate__4_ {
             get {
                 object obj = ResourceManager.GetObject("arrow-down-sign-to-navigate (4)", resourceCulture);
@@ -106,6 +116,16 @@ namespace _2M_Maintenace.Properties {
         internal static System.Drawing.Bitmap customer__3_ {
             get {
                 object obj = ResourceManager.GetObject("customer (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eye_with_thick_outline_variant {
+            get {
+                object obj = ResourceManager.GetObject("eye-with-thick-outline-variant", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

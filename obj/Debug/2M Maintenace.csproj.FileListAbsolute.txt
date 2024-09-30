@@ -50,3 +50,4 @@ C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormGestion
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormGestionSortie.resources
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormPretMateriel.resources
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormIntervention.resources
+C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormSetting.resources

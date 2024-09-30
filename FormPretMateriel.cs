@@ -111,7 +111,7 @@ namespace _2M_Maintenace
             Utils.CloseConnection(); // Fermer toute connexion ouverte
 
             // Demander à l'utilisateur d'entrer le numéro IMO du matériel
-            string Cin = Microsoft.VisualBasic.Interaction.InputBox("Entrer le code du membre que vous recherchez", "Gestion des Matériels");
+            string Cin = Microsoft.VisualBasic.Interaction.InputBox("Entrer le code du membre que vous recherchez", "2M");
 
             // Vérifier si l'IMO est vide
             if (string.IsNullOrWhiteSpace(Cin))
@@ -148,7 +148,7 @@ namespace _2M_Maintenace
             Utils.CloseConnection(); // Fermer toute connexion ouverte
 
             // Demander à l'utilisateur d'entrer le numéro IMO du matériel
-            string imo = Microsoft.VisualBasic.Interaction.InputBox("Entrer le numéro IMO du matériel que vous recherchez", "Gestion des Matériels");
+            string imo = Microsoft.VisualBasic.Interaction.InputBox("Entrer le numéro IMO du matériel que vous recherchez", "2M");
 
             // Vérifier si l'IMO est vide
             if (string.IsNullOrWhiteSpace(imo))
@@ -274,6 +274,7 @@ namespace _2M_Maintenace
 
                 // Remplir les TextBox dans le formulaire principal pour permettre la modification
                 txtidp.Text = row["id"].ToString();
+                txtcp.Text = row["code"].ToString();
                 txtnp.Text = row["nom"].ToString();
                 txtpp.Text = row["prenom"].ToString();
                 txtdp.Text = "Maintenance";
@@ -364,6 +365,11 @@ namespace _2M_Maintenace
         private void txtdd_ValueChanged(object sender, EventArgs e)
         {
             txtdf.MinDate = txtdd.Value;
+        }
+
+        private void filter_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
