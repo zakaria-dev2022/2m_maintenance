@@ -78,6 +78,7 @@ namespace _2M_Maintenace
             ajouter.Enabled = true;
             modifier.Enabled = false;
             supprimer.Enabled = false;
+            lb_msg.Visible = false;
         }
     
 
@@ -102,7 +103,7 @@ namespace _2M_Maintenace
             }
             else
             {
-                MessageBox.Show("Mot De Passe Incorect", "Zakaria Location");
+                //MessageBox.Show("Mot De Passe Incorect", "Zakaria Location");
                 lb_msg.Visible = true;
                 lb_msg.Text = "Mot De Passe Incorect";
                 txtcmp.Text = "";
@@ -249,6 +250,11 @@ namespace _2M_Maintenace
                 dash.Show();
                 this.Hide();
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

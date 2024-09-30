@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPretMateriel));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtcp = new System.Windows.Forms.TextBox();
@@ -76,7 +76,6 @@
             this.tableau = new System.Windows.Forms.DataGridView();
             this.ajouter = new System.Windows.Forms.Button();
             this.modifier = new System.Windows.Forms.Button();
-            this.chercherPretmateriel = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chercherPreteur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnnouveauPretMateriel)).BeginInit();
@@ -87,7 +86,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chercherMateriel)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableau)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chercherPretmateriel)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -219,7 +217,7 @@
             // btnnouveauPretMateriel
             // 
             this.btnnouveauPretMateriel.Image = global::_2M_Maintenace.Properties.Resources.plus__2_;
-            this.btnnouveauPretMateriel.Location = new System.Drawing.Point(1667, 592);
+            this.btnnouveauPretMateriel.Location = new System.Drawing.Point(1810, 768);
             this.btnnouveauPretMateriel.Name = "btnnouveauPretMateriel";
             this.btnnouveauPretMateriel.Size = new System.Drawing.Size(80, 55);
             this.btnnouveauPretMateriel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -528,35 +526,35 @@
             // 
             this.tableau.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
             this.tableau.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableau.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableau.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.tableau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tableau.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(123)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tableau.DefaultCellStyle = dataGridViewCellStyle5;
             this.tableau.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableau.EnableHeadersVisualStyles = false;
             this.tableau.Location = new System.Drawing.Point(0, 725);
             this.tableau.Name = "tableau";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableau.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableau.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.tableau.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.tableau.RowTemplate.Height = 28;
             this.tableau.Size = new System.Drawing.Size(1890, 243);
@@ -597,24 +595,12 @@
             this.modifier.UseVisualStyleBackColor = false;
             this.modifier.Click += new System.EventHandler(this.modifier_Click);
             // 
-            // chercherPretmateriel
-            // 
-            this.chercherPretmateriel.Image = global::_2M_Maintenace.Properties.Resources.search__1_;
-            this.chercherPretmateriel.Location = new System.Drawing.Point(1667, 488);
-            this.chercherPretmateriel.Name = "chercherPretmateriel";
-            this.chercherPretmateriel.Size = new System.Drawing.Size(80, 55);
-            this.chercherPretmateriel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.chercherPretmateriel.TabIndex = 168;
-            this.chercherPretmateriel.TabStop = false;
-            this.chercherPretmateriel.Click += new System.EventHandler(this.chercherPretmateriel_Click);
-            // 
             // FormPretMateriel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1890, 968);
-            this.Controls.Add(this.chercherPretmateriel);
             this.Controls.Add(this.ajouter);
             this.Controls.Add(this.modifier);
             this.Controls.Add(this.btnnouveauPretMateriel);
@@ -642,7 +628,6 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableau)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chercherPretmateriel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -685,7 +670,6 @@
         private System.Windows.Forms.PictureBox btnnouveauPretMateriel;
         private System.Windows.Forms.PictureBox chercherMateriel;
         private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.PictureBox chercherPretmateriel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
