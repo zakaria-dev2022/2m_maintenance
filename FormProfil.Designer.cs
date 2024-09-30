@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtidp = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.exit = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.supprimer = new System.Windows.Forms.Button();
             this.tableau = new System.Windows.Forms.DataGridView();
@@ -44,19 +47,22 @@
             this.txtep = new System.Windows.Forms.TextBox();
             this.txtid = new System.Windows.Forms.TextBox();
             this.txtcmp = new System.Windows.Forms.TextBox();
-            this.exit = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txtidp = new System.Windows.Forms.TextBox();
+            this.chercherPreteur = new System.Windows.Forms.PictureBox();
+            this.btnnouveauPretMateriel = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableau)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableau)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chercherPreteur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnnouveauPretMateriel)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnnouveauPretMateriel);
+            this.panel1.Controls.Add(this.chercherPreteur);
             this.panel1.Controls.Add(this.txtidp);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label5);
@@ -72,10 +78,21 @@
             this.panel1.Controls.Add(this.txtep);
             this.panel1.Controls.Add(this.txtid);
             this.panel1.Controls.Add(this.txtcmp);
-            this.panel1.Location = new System.Drawing.Point(214, 150);
+            this.panel1.Location = new System.Drawing.Point(467, 221);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(993, 715);
             this.panel1.TabIndex = 0;
+            // 
+            // txtidp
+            // 
+            this.txtidp.BackColor = System.Drawing.Color.White;
+            this.txtidp.Enabled = false;
+            this.txtidp.Location = new System.Drawing.Point(430, 140);
+            this.txtidp.Multiline = true;
+            this.txtidp.Name = "txtidp";
+            this.txtidp.Size = new System.Drawing.Size(135, 26);
+            this.txtidp.TabIndex = 137;
+            this.txtidp.Visible = false;
             // 
             // panel2
             // 
@@ -111,6 +128,27 @@
             this.panel3.Size = new System.Drawing.Size(993, 100);
             this.panel3.TabIndex = 124;
             // 
+            // exit
+            // 
+            this.exit.Image = global::_2M_Maintenace.Properties.Resources.back_arrow;
+            this.exit.Location = new System.Drawing.Point(906, 28);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(61, 52);
+            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.exit.TabIndex = 49;
+            this.exit.TabStop = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::_2M_Maintenace.Properties.Resources.add_user__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(55, 18);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(76, 62);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -137,17 +175,19 @@
             this.supprimer.TabIndex = 133;
             this.supprimer.Text = "Supprimer";
             this.supprimer.UseVisualStyleBackColor = false;
+            this.supprimer.Click += new System.EventHandler(this.supprimer_Click);
             // 
             // tableau
             // 
             this.tableau.BackgroundColor = System.Drawing.Color.White;
             this.tableau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableau.Location = new System.Drawing.Point(78, 445);
+            this.tableau.Location = new System.Drawing.Point(83, 445);
             this.tableau.Name = "tableau";
             this.tableau.RowHeadersWidth = 62;
             this.tableau.RowTemplate.Height = 28;
-            this.tableau.Size = new System.Drawing.Size(854, 247);
+            this.tableau.Size = new System.Drawing.Size(849, 247);
             this.tableau.TabIndex = 131;
+            this.tableau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableau_CellClick);
             // 
             // modifier
             // 
@@ -162,6 +202,7 @@
             this.modifier.TabIndex = 130;
             this.modifier.Text = "Modifier";
             this.modifier.UseVisualStyleBackColor = false;
+            this.modifier.Click += new System.EventHandler(this.modifier_Click);
             // 
             // ajouter
             // 
@@ -228,7 +269,7 @@
             // 
             this.txtep.BackColor = System.Drawing.Color.White;
             this.txtep.Enabled = false;
-            this.txtep.Location = new System.Drawing.Point(344, 140);
+            this.txtep.Location = new System.Drawing.Point(344, 139);
             this.txtep.Multiline = true;
             this.txtep.Name = "txtep";
             this.txtep.Size = new System.Drawing.Size(253, 26);
@@ -254,36 +295,27 @@
             this.txtcmp.Size = new System.Drawing.Size(253, 26);
             this.txtcmp.TabIndex = 123;
             // 
-            // exit
+            // chercherPreteur
             // 
-            this.exit.Image = global::_2M_Maintenace.Properties.Resources.back_arrow;
-            this.exit.Location = new System.Drawing.Point(906, 28);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(61, 52);
-            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.exit.TabIndex = 49;
-            this.exit.TabStop = false;
+            this.chercherPreteur.Image = global::_2M_Maintenace.Properties.Resources.search__1_;
+            this.chercherPreteur.Location = new System.Drawing.Point(620, 133);
+            this.chercherPreteur.Name = "chercherPreteur";
+            this.chercherPreteur.Size = new System.Drawing.Size(55, 51);
+            this.chercherPreteur.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.chercherPreteur.TabIndex = 163;
+            this.chercherPreteur.TabStop = false;
+            this.chercherPreteur.Click += new System.EventHandler(this.chercherPreteur_Click);
             // 
-            // pictureBox2
+            // btnnouveauPretMateriel
             // 
-            this.pictureBox2.Image = global::_2M_Maintenace.Properties.Resources.add_user__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(55, 18);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(76, 62);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
-            // txtidp
-            // 
-            this.txtidp.BackColor = System.Drawing.Color.White;
-            this.txtidp.Enabled = false;
-            this.txtidp.Location = new System.Drawing.Point(430, 140);
-            this.txtidp.Multiline = true;
-            this.txtidp.Name = "txtidp";
-            this.txtidp.Size = new System.Drawing.Size(135, 26);
-            this.txtidp.TabIndex = 137;
-            this.txtidp.Visible = false;
+            this.btnnouveauPretMateriel.Image = global::_2M_Maintenace.Properties.Resources.plus__2_;
+            this.btnnouveauPretMateriel.Location = new System.Drawing.Point(852, 384);
+            this.btnnouveauPretMateriel.Name = "btnnouveauPretMateriel";
+            this.btnnouveauPretMateriel.Size = new System.Drawing.Size(80, 55);
+            this.btnnouveauPretMateriel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnnouveauPretMateriel.TabIndex = 169;
+            this.btnnouveauPretMateriel.TabStop = false;
+            this.btnnouveauPretMateriel.Click += new System.EventHandler(this.btnnouveauPretMateriel_Click);
             // 
             // FormProfil
             // 
@@ -301,9 +333,11 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tableau)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableau)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chercherPreteur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnnouveauPretMateriel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -329,5 +363,7 @@
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.TextBox txtcmp;
         private System.Windows.Forms.TextBox txtidp;
+        private System.Windows.Forms.PictureBox chercherPreteur;
+        private System.Windows.Forms.PictureBox btnnouveauPretMateriel;
     }
 }

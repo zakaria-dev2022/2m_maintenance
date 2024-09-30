@@ -562,6 +562,7 @@
             this.tableau.Size = new System.Drawing.Size(1890, 243);
             this.tableau.TabIndex = 158;
             this.tableau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableau_CellClick);
+            this.tableau.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableau_CellContentClick);
             // 
             // ajouter
             // 

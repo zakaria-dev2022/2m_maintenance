@@ -121,5 +121,12 @@ namespace _2M_Maintenace
             Admin.ModifierAdmin(admin);
             remplir();
         }
+
+        private void Profil_Click(object sender, EventArgs e)
+        {
+            FormProfil formProfil = new FormProfil();
+            formProfil.Show();
+            this.Hide();
+        }
     }
 }

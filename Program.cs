@@ -16,7 +16,7 @@ namespace _2M_Maintenace
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormProfil());
+            Application.Run(new FormChargement());
         }
     }
 }

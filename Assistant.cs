@@ -36,22 +36,27 @@ namespace _2M_Maintenace
 
                 if (count == 0)
                 {
-                   // MessageBox.Show("Le membre avec cet ID n'existe pas dans la table profil.", "Erreur");
-                    return;
+                    // Si le membre_id existe, procéder à l'ajout de l'assistant
+                    string query = "INSERT INTO profils (membre_id, password) VALUES (@MembreId, @Password)";
+                    MySqlCommand command = new MySqlCommand(query, Utils.cnx);
+                    command.Parameters.AddWithValue("@MembreId", assistant.membre_id);
+                    command.Parameters.AddWithValue("@Password", assistant.password);
+
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Profil ajouté avec succès", "2M");
+                }
+                else
+                {
+                    
+                MessageBox.Show("Le membre avec cet Code existe déja dans la table profil.", "Erreur");
                 }
 
-                // Si le membre_id existe, procéder à l'ajout de l'assistant
-                string query = "INSERT INTO profils (membre_id, password) VALUES (@MembreId, @Password)";
-                MySqlCommand command = new MySqlCommand(query, Utils.cnx);
-                command.Parameters.AddWithValue("@MembreId", assistant.membre_id);
-                command.Parameters.AddWithValue("@Password", assistant.password);
 
-                command.ExecuteNonQuery();
-                MessageBox.Show("Assistant ajouté avec succès", "Zakaria Location");
+                
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erreur lors de l'ajout de l'assistant : {ex.Message}");
+                MessageBox.Show($"Erreur lors de l'ajout de profil : {ex.Message}");
             }
             finally
             {
@@ -67,28 +72,18 @@ namespace _2M_Maintenace
             {
                 Utils.OpenConnection();
 
-                // Vérifier si membre_id existe dans la table profil
-                string checkQuery = "SELECT COUNT(*) FROM profils WHERE membre_id = @MembreId";
-                MySqlCommand checkCommand = new MySqlCommand(checkQuery, Utils.cnx);
-                checkCommand.Parameters.AddWithValue("@MembreId", assistant.membre_id);
+               
+                    // Si le membre_id existe, procéder à la modification de l'assistant
+                    string query = "UPDATE profils SET membre_id = @MembreId, password = @Password WHERE id = @Id";
+                    MySqlCommand command = new MySqlCommand(query, Utils.cnx);
+                    command.Parameters.AddWithValue("@MembreId", assistant.membre_id);
+                    command.Parameters.AddWithValue("@Password", assistant.password);
+                    command.Parameters.AddWithValue("@Id", id);
 
-                int count = Convert.ToInt32(checkCommand.ExecuteScalar());
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Modification effectuée avec succès", "2M");
+                   
 
-                if (count == 0)
-                {
-                    //MessageBox.Show("Le membre avec cet ID n'existe pas dans la table profil.", "Erreur");
-                    return;
-                }
-
-                // Si le membre_id existe, procéder à la modification de l'assistant
-                string query = "UPDATE profils SET membre_id = @MembreId, password = @Password WHERE id = @Id";
-                MySqlCommand command = new MySqlCommand(query, Utils.cnx);
-                command.Parameters.AddWithValue("@MembreId", assistant.membre_id);
-                command.Parameters.AddWithValue("@Password", assistant.password);
-                command.Parameters.AddWithValue("@Id", id);
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Modification effectuée avec succès", "Zakaria Location");
             }
             catch (Exception ex)
             {

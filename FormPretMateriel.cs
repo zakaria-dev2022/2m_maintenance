@@ -371,5 +371,10 @@ namespace _2M_Maintenace
         {
             
         }
+
+        private void tableau_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

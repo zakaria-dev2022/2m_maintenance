@@ -27,7 +27,7 @@ namespace _2M_Maintenace
                 Utils.OpenConnection(); // Ouvrir la connexion à la base de données
 
                 // Requête SQL pour insérer un nouveau profil
-                string query = "INSERT INTO profil (membre_id, password) VALUES (@MembreId, @Password)";
+                string query = "INSERT INTO profils (membre_id, password) VALUES (@MembreId, @Password)";
                 MySqlCommand command = new MySqlCommand(query, Utils.cnx);
                 command.Parameters.AddWithValue("@MembreId", membreId);
                 command.Parameters.AddWithValue("@Password", password); // Assurez-vous de stocker le mot de passe hashé
