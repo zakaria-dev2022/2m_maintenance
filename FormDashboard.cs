@@ -107,9 +107,35 @@ namespace _2M_Maintenace
 
         private void btnParametre_Click(object sender, EventArgs e)
         {
-            FormSetting formSetting = new FormSetting();
-            formSetting.Show();
-            this.Hide();
+            Utils.CloseConnection(); // Fermer toute connexion ouverte
+
+            // Demander à l'utilisateur d'entrer le numéro IMO du matériel
+            string pw = Microsoft.VisualBasic.Interaction.InputBox("Entrer le Mot De Passe du Admin", "2M");
+
+            // Vérifier si l'IMO est vide
+            if (string.IsNullOrWhiteSpace(pw))
+            {
+                //MessageBox.Show("Le numéro CIN ne peut pas être vide.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Requête SQL pour obtenir les données du matériel
+            DataTable dataTable = Utils.ObtenirDonnees("SELECT * FROM admin WHERE password = '" + pw + "'");
+
+            // Si des données sont trouvées
+            if (dataTable.Rows.Count > 0)
+            {
+                FormSetting formSetting = new FormSetting();
+                formSetting.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Le Mot De Passe Est Incorrecte.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+           
         }
     }
 }

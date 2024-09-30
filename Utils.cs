@@ -206,7 +206,7 @@ namespace _2M_Maintenace
             else if (isValidProfil)
             {
                 // Afficher le formulaire du tableau de bord profil standard
-                FormDash dash = new FormDash();
+                FormDashboard dash = new FormDashboard();
                 dash.Show();
                 Application.OpenForms["FormConnection"].Hide();
             }

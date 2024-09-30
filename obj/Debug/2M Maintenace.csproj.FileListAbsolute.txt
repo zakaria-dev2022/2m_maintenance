@@ -52,3 +52,4 @@ C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormPretMat
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormIntervention.resources
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormSetting.resources
 C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormProfil.resources
+C:\Users\Zakaria\source\repos\2M Maintenace\obj\Debug\_2M_Maintenace.FormDash.resources
