@@ -45,14 +45,14 @@
             this.btn_logo = new System.Windows.Forms.Button();
             this.lb_logo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Profil = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
             this.oeil_mp = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.exit = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Profil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oeil_mp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -62,7 +62,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.Profil);
             this.panel2.Controls.Add(this.btn_logo);
             this.panel2.Controls.Add(this.lb_logo);
             this.panel2.Controls.Add(this.label2);
@@ -262,15 +262,15 @@
             this.label2.TabIndex = 154;
             this.label2.Text = "Photo";
             // 
-            // pictureBox1
+            // Profil
             // 
-            this.pictureBox1.Image = global::_2M_Maintenace.Properties.Resources.add_user;
-            this.pictureBox1.Location = new System.Drawing.Point(886, 543);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(69, 53);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 156;
-            this.pictureBox1.TabStop = false;
+            this.Profil.Image = global::_2M_Maintenace.Properties.Resources.add_user;
+            this.Profil.Location = new System.Drawing.Point(886, 543);
+            this.Profil.Name = "Profil";
+            this.Profil.Size = new System.Drawing.Size(69, 53);
+            this.Profil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Profil.TabIndex = 156;
+            this.Profil.TabStop = false;
             // 
             // logo
             // 
@@ -330,7 +330,7 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Profil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oeil_mp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -361,6 +361,6 @@
         private System.Windows.Forms.Label lb_logo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox logo;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Profil;
     }
 }
